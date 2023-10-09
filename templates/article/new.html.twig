@@ -1,0 +1,21 @@
+{# templates/article/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Créer un nouvel article</h1>
+    
+    {{ form_start(form) }}
+
+    {{ form_row(form.title) }}
+
+    {{ form_row(form.content) }}
+
+    {{ form_row(form.imageFile) }}
+
+    <button type="submit" class="btn btn-primary">Ajouter l'article</button>
+    
+    {{ form_end(form) }}
+
+    <a href="{{ path('article_list') }}">Retour à la liste des articles</a>
+{% endblock %}

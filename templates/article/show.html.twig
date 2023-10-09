@@ -1,0 +1,17 @@
+{# templates/article/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ article.title }}</h1>
+
+    <img src="{{ vich_uploader_asset(article.image, 'imageFile') }}" alt="{{ article.title }}">
+    
+    <p>{{ article.content|raw }}</p>
+    
+    <p>Publié le : {{ article.createdAt|date('d/m/Y H:i') }}</p>
+    
+    {# Ajoutez d'autres informations de l'article ici si nécessaire #}
+    
+    <a href="{{ path('article_list') }}">Retour à la liste des articles</a>
+{% endblock %}

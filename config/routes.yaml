@@ -1,3 +1,19 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+# config/routes.yaml
+
+article_list:
+    path: /
+    controller: App\Controller\ArticleController::list
+    methods: GET
+
+article_show:
+    path: /article/{id}
+    controller: App\Controller\ArticleController::show
+    methods: GET
+
+article_new:
+    path: /new
+    controller: App\Controller\ArticleController::new
+    methods: ['GET', 'POST']
